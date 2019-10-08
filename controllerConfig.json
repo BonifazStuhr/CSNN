@@ -1,0 +1,13 @@
+{
+  "executeExperiments": 1,
+  "hardware":{
+    "numGPUs":  4,
+    "numCPUCores": 28
+  },
+
+  "executeCreateTfRecordsFromDataset": 0,
+  "datasetsToCreateTfRecords": ["Cifar10"],
+  "datasetTfRecordSplits": {"Cifar10":[[50000,5000,5000, "None"]]},
+  "datasetPrePreProcessors": 0
+}
+

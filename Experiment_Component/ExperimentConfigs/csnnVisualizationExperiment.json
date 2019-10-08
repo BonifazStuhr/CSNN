@@ -1,0 +1,124 @@
+{
+  "csnnConfigs": [
+     {
+  "modelName": "D-CSNN-B1-Cifar10",
+  "trainingSteps":6000,
+  "xFoldCrossValidation": 1,
+  "evalInterval": 0,
+  "batchSizes": {"Cifar10": 1},
+  "batchSizeForEncoding": {"Cifar10": 4},
+  "encodingSizes": {"Cifar10": {"train": -1, "eval": -1, "test":-1}},
+  "augmentData": 0,
+  "zeroMeanUnitVarianceEncoding": 0,
+  "doVal":0,
+  "layerWiseBottomUpTraining":1,
+  "layers":[
+   {
+  "somKernel": [3, 3],
+  "somGrid": [12, 12, 3],
+  "strides": [1, 1],
+  "padding":"SAME",
+  "somLearningRate": 0.1,
+  "localLearningRate": 0.005,
+  "somLearningRule": "convSomLearning",
+  "localLearningRule": "proposedLocalLearningHebb",
+  "neighborhoodStdCoeff":1.0,
+  "neighborhoodFunction":"gaussian",
+  "decreaseNeighborhoodRange":0,
+  "bmuMetrics": "convolutionDistance",
+  "bmuMetricsNormalization": "batchNorm",
+  "bmuMetricsValueInvert": 0,
+  "localWeightsType": "betweenInputAndNeurons",
+  "localNeighborhoodCoeffType": 0,
+  "trainInterval":[0,2000],
+  "verbose": 1,
+  "pooling": [2, 2, "max"],
+  "featurePooling": 0,
+  "dropout": 0,
+  "skipOut": 0,
+  "skipIn": 0
+},
+{
+  "somKernel": [3, 3],
+  "somGrid": [14, 14, 3],
+  "strides": [1, 1],
+  "padding":"SAME",
+  "somLearningRate": 0.1,
+  "localLearningRate": 0.005,
+  "somLearningRule": "convSomLearning",
+  "localLearningRule": "proposedLocalLearningHebb",
+  "neighborhoodStdCoeff":1.5,
+  "neighborhoodFunction":"gaussian",
+  "decreaseNeighborhoodRange":0,
+  "bmuMetrics": "convolutionDistance",
+  "bmuMetricsNormalization": "batchNorm",
+  "bmuMetricsValueInvert": 0,
+  "localWeightsType": "betweenNeurons",
+  "localNeighborhoodCoeffType": 0,
+  "trainInterval":[2000,4000],
+  "verbose": 1,
+  "pooling": [2, 2, "max"],
+  "featurePooling": 0,
+  "dropout": 0,
+  "skipOut": 0,
+  "skipIn": 0
+},
+    {
+  "somKernel": [3, 3],
+  "somGrid": [16, 16, 3],
+  "strides": [1, 1],
+  "padding":"SAME",
+  "somLearningRate": 0.1,
+  "localLearningRate": 0.005,
+  "somLearningRule": "convSomLearning",
+  "localLearningRule": "proposedLocalLearningHebb",
+  "neighborhoodStdCoeff":1.5,
+  "neighborhoodFunction":"gaussian",
+  "decreaseNeighborhoodRange":0,
+  "bmuMetrics": "convolutionDistance",
+  "bmuMetricsNormalization": "batchNorm",
+  "bmuMetricsValueInvert": 0,
+  "localWeightsType": "betweenNeurons",
+  "localNeighborhoodCoeffType": 0,
+  "trainInterval":[4000,6000],
+  "verbose": 1,
+  "pooling": [2, 2, "max"],
+  "featurePooling": 0,
+  "dropout": 0,
+  "skipOut": 0,
+  "skipIn": 0
+}]}
+  ],
+  "datasetConfigs": [{
+    "nameOfDataset": "Cifar10",
+    "splitOfDataset": [50000, 5000, 5000, "'None'"],
+    "dataShape": [32,32,3],
+    "numClasses": 10
+  }
+  ],
+ "encodingConfig": {
+    "tfRecordInputPipelineConfig": {
+      "train": {
+        "numThreads": 1,
+        "mapAndBatch": 0,
+        "cache": 1,
+        "shuffelAndRepeat": 0,
+        "bufferMB": 256,
+        "shuffleMB": 256,
+        "prefetchMB": 256
+      },
+      "val": {
+        "numThreads": 1,
+        "mapAndBatch": 0,
+        "cache": 1,
+        "shuffelAndRepeat": 0,
+        "bufferMB": 128,
+        "shuffleMB": 128,
+        "prefetchMB": 128
+      }
+    }
+  }
+}
+
+
+

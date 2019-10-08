@@ -1,0 +1,14 @@
+{
+  "mode": "sequential",
+  "experimentsToRun": ["CsnnOfmExperiment", "CsnnPerformancesExperiment", "CsnnGeneralizationExperiment",
+   "CsnnReconstructionExperiment", "CsnnVisualizationExperiment"],
+
+  "experimentConfigsToRun": {"CsnnOfmExperiment": ["csnnOfmExperiment.json"],
+    "CsnnPerformancesExperiment": ["csnnMethodInfluences1Experiment.json","csnnMethodInfluences2Experiment.json",
+      "csnnFewShotExperiment.json","csnnPerformancesExperiment.json", "csnnPerformancesAugExperiment.json"],
+    "CsnnGeneralizationExperiment": ["csnnGeneralizationExperiment.json"],
+    "CsnnReconstructionExperiment": ["csnnReconstructionExperiment.json"],
+    "CsnnVisualizationExperiment":  ["csnnVisualizationExperiment.json"]}
+}
+
+
