@@ -1,5 +1,5 @@
 # CSNN Implementation
-This is the original implementation of the paper “CSNNs: Unsupervised, Backpropagation-Free Convolutional Neural Networks for Representation Learning” (TODO: insert link and reference when reviewed) in TensorFlow r1.13 and Keras delivered with this version.
+This is the original implementation of the paper [“CSNNs: Unsupervised, Backpropagation-Free Convolutional Neural Networks for Representation Learning”](https://arxiv.org/abs/2001.10388) in TensorFlow r1.13 and Keras delivered with this version.
 ## Usage
 ### 1. Configuration
 There are two .json configuration files: ```controllerConfig.json``` and ```experimetSchedule.json``` to configure a run. The default settings execute all experiments presented in the paper on 4 GPUs and 28 CPU cores (executing all experiments takes a long time).
